@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="styles/bootstrap.min.css">
+    <title>Music Store</title>
+    <style media="screen">
+      textarea {
+        overflow-y: scroll;
+        resize: none;
+      }
+
+    </style>
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-default" role="navigation">
+      <div class="container">
+        <!-- Navbar header -->
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">Music Store</a>
+        </div>
+
+        <ul class="nav navbar-nav">
+          <li>
+            <a href="#">Bands</a>
+          </li>
+          <li>
+            <a href="#">Albums</a>
+          </li>
+          <li>
+            <a href="#">New songs</a>
+          </li>
+          <!-- Dropdown sub-menu -->
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Sort by genres
+              <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+              <li>
+                <a href="#">Pop</a>
+              </li>
+              <li>
+                <a href="#">Rap</a>
+              </li>
+              <li>
+                <a href="#">Rock</a>
+              </li>
+            </ul>
+          </li>
+          <li class="active">
+            <a href="#">Submit new Album</a>
+          </li>
+        </ul>
+        <!-- Login buttons -->
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a href="#" class="btn btn-default" data-toggle="modal" data-target="#signupWindow">
+              <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+              Sign Up</a>
+          </li>
+          <li>
+            <a href="#" class="btn btn-default" data-toggle="modal" data-target="#loginWindow">
+              <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span>
+              Login</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!-- End navbar -->
+
+    <div class="container">
+      <!-- Header -->
+      <div class="jumbotron">
+        <h1>Submit Album</h1>
+      </div>
+
+      <div class="panel-group" id="musicStore">
+        <!-- Album and Artist panel-->
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <!-- Panel Title -->
+            <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#musicStore" href="#titleAndArtist">
+                Album Title and Artist
+              </a>
+            </h4>
+          </div>
+
+          <!-- Panel Data -->
+          <div id="titleAndArtist" class="panel-collapse collapse in">
+            <div class="panel-body">
+              <div class="row">
+                <!-- Album Cover image -->
+                <div class="col-md-3 album-cover">
+                  <div class="col-md-12 thumbnail">
+                    <img class="" src="public/Album.gif" alt="Album cover">
+                    <br>
+                    <div class="text-center">
+                      <span class="glyphicon glyphicon-pencil"></span>
+                      Edit Album image
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Edit Album Info form -->
+                <div class="col-md-9">
+                  <form class="form form-horizontal" action=" #" method=" post">
+                    <!-- Album title -->
+                    <div class="form-group">
+                      <label for="albumTitle" class="col-sm-2 control-label">Album Title:</label>
+                      <div class="col-sm-10">
+                        <input type="text" class="form-control" id="albumTitle" placeholder="">
+                      </div>
+                    </div>
+                    <!-- Artist -->
+                    <div class="form-group">
+                      <label for="artist" class="col-sm-2 control-label">Artist:</label>
+                      <div class="col-sm-10">
+                        <input type="text" class="form-control" id="artist" placeholder="">
+                      </div>
+                    </div>
+                    <!-- Record studio -->
+                    <div class="form-group">
+                      <label for="studioInfo" class="control-label col-sm-2">Record studio:</label>
+                      <div class="col-sm-10">
+                        <input type="text" id="studioInfo" class="form-control" placeholder="">
+                      </div>
+                    </div>
+
+                    <!-- Album desciption -->
+                    <div class="form-group">
+                      <label for="desc" class="col-sm-2 control-label">Album description:</label>
+                      <div class="col-sm-10">
+                        <textarea name="name" id="desc" rows="5" class="form-control"></textarea>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+                <!-- End album info -->
+              </div>
+            </div>
+          </div>
+
+          <!-- Expert rewievs-->
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <!-- Title -->
+              <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#musicStore" href="#expertReview">
+                  Expert Review
+                </a>
+              </h4>
+            </div>
+            <!-- Panel data -->
+            <div id="expertReview" class="panel-collapse collapse">
+              <div class="panel-body">
+
+                <!-- Reviews -->
+                <div class="form-group">
+                  <label for="reviews" class="col-sm-1 control-label">Reviews:</label>
+                  <div class="col-sm-11">
+                    <textarea name="name" id="reviews" rows="6" class="form-control"></textarea>
+                  </div>
+                </div>
+                <!-- Rating -->
+                <div class="form-group">
+                  <label for="rating" class="col-sm-1">Rate album:</label>
+                  <div class="btn-group col-sm-11" id="rating" data-toggle="buttons">
+                    <label class="btn btn-warning">
+                      <input type="radio" name="options" id="star1" autocomplete="off" checked>
+                      <span class="glyphicon glyphicon-star"></span>
+                    </label>
+                    <label class="btn btn-warning">
+                      <input type="radio" name="options" id="star2" autocomplete="off">
+                      <span class="glyphicon glyphicon-star"></span>
+                      <span class="glyphicon glyphicon-star"></span>
+                    </label>
+                    <label class="btn btn-warning">
+                      <input type="radio" name="options" id="star3" autocomplete="off">
+                      <span class="glyphicon glyphicon-star"></span>
+                      <span class="glyphicon glyphicon-star"></span>
+                      <span class="glyphicon glyphicon-star"></span>
+                    </label>
+                    <label class="btn btn-warning">
+                      <input type="radio" name="options" id="star4" autocomplete="off">
+                      <span class="glyphicon glyphicon-star"></span>
+                      <span class="glyphicon glyphicon-star"></span>
+                      <span class="glyphicon glyphicon-star"></span>
+                      <span class="glyphicon glyphicon-star"></span>
+                    </label>
+                    <label class="btn btn-warning">
+                      <input type="radio" name="options" id="star5" autocomplete="off">
+                      <span class="glyphicon glyphicon-star"></span>
+                      <span class="glyphicon glyphicon-star"></span>
+                      <span class="glyphicon glyphicon-star"></span>
+                      <span class="glyphicon glyphicon-star"></span>
+                      <span class="glyphicon glyphicon-star"></span>
+                    </label>
+                  </div>
+                </div>
+                <!-- End rating -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--  End accordion-->
+
+        <!-- Submit button -->
+        <br>
+        <div class="row">
+          <input type="submit" class="btn btn-success col-sm-4 col-sm-offset-4" data-toggle="modal" data-target="#submitWindow" value="Submit">
+        </div>
+
+        <!-- MODAL WINDOWS -->
+        <!-- Login window -->
+        <div class="modal fade" id="loginWindow" tabindex="-1" role="dialog" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <!-- Modal Header -->
+              <div class="modal-header">
+                <h3 class="modal-title text-center">Log in</h4>
+              </div>
+              <!-- Modal Body -->
+              <div class="modal-body">
+                <form class="form-horizontal" action="index.html" method="post">
+                  <div class="form-group row">
+                    <label for="myLogin" class="control-label col-sm-2">Login:</label>
+                    <div class="input-group col-sm-9" id="myLogin">
+                      <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-user"></span>
+                      </span>
+                      <input type="text" class="form-control" name="login">
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label for="myPassword" class="control-label col-sm-2">Password:</label>
+                    <div class="input-group col-sm-9" id="myPassword">
+                      <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-eye-close"></span>
+                      </span>
+                      <input type="password" name="password" class="form-control">
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <!--  Modal footer-->
+              <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Cansel</button>
+                <button type="button" class="btn btn-success">Confirm</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Signup window -->
+        <div class="modal fade" id="signupWindow" tabindex="-1" role="dialog" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <!-- Modal Header -->
+              <div class="modal-header">
+                <h3 class="modal-title text-center">Sign up</h4>
+              </div>
+              <!-- Modal Body -->
+              <div class="modal-body">
+                <form class="form-horizontal" action="index.html" method="post">
+                  <div class="form-group row">
+                    <label for="userLogin" class="control-label col-sm-2">Login:</label>
+                    <div class="input-group col-sm-9" id="userLogin">
+                      <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-user"></span>
+                      </span>
+                      <input type="text" class="form-control" name="userLogin">
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label for="userPassword" class="control-label col-sm-2">Password:</label>
+                    <div class="input-group col-sm-9" id="userPassword">
+                      <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-eye-close"></span>
+                      </span>
+                      <input type="password" name="password" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label for="repeatPassword" class="control-label col-sm-2">Repeat password:</label>
+                    <div class="input-group col-sm-9" id="repeatPassword">
+                      <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-eye-close"></span>
+                      </span>
+                      <input type="password" name="password" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label class="checkbox-inline col-sm-10 col-sm-offset-2">
+                      <input type="checkbox" value="">I agree with
+                      <a href="#">site policy</a>.
+                    </label>
+                  </div>
+                </form>
+              </div>
+              <!--  Modal footer-->
+              <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Cansel</button>
+                <button type="button" class="btn btn-success">Register</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!--  Submit confimation -->
+        <div class="modal fade" id="submitWindow" tabindex="-1" role="dialog" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <!-- Modal Header -->
+              <div class="modal-header">
+                <h3 class="modal-title text-center">Are you shure?</h4>
+              </div>
+              <!-- Modal Body -->
+              <div class="modal-body">
+                Is everything is correct? You can't edit information after submitting.
+              </div>
+              <!--  Modal footer-->
+              <div class="modal-footer">
+                <button type="button" class="btn btn-warning" data-dismiss="modal">Cansel</button>
+                <button type="button" class="btn btn-primary">Submit</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+      </body>
+    </html>
